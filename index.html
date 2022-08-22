@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="index.css">
-    <script src="script.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -17,15 +17,23 @@
       <div class="main">
 
         <div class="adder">
-            <input type="text" placeholder="Enter todos" id="data" />
-            <button id="btn" onclick="add()">Add</button>
+            <input type="text" placeholder="Enter todos" id="data" required />
+            <button id="btn" type="submit">Add</button>
         </div>
+
         <div class="lists">
-          <ol id="list"></ol>
+          <ol id="list">
+            <!-- <li class="task">
+                <p>Title Here</p>
+                <span id="del">
+                  <i class="bi bi-trash"></i>
+                </span>
+            </li> -->
+          </ol>
         </div>
 
       </div>
     </div>
-
+    <script src="script.js"></script>
   </body>
 </html>
