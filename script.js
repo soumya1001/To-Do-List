@@ -7,7 +7,7 @@ JSON.parse(localStorage.getItem("tasks"))
     :[];
 
 showTasks();
-
+//show all task
 function showTasks(){
     tasks.forEach((e,index)=>{
     const li = document.createElement("li");
@@ -42,6 +42,13 @@ const removeTasks=()=>{
         div.remove();
     })
 }
+//click enter to submit
+input.addEventListener("keypress",(event)=>{
+    if(event.key === "Enter"){
+        btn.click();
+    }
+})
+//add todos
 btn.addEventListener("click",()=>{
     if(input.value === ''){
         alert("Empty!! Write something ");
