@@ -26,7 +26,9 @@ function showTasks(){
     i.className="bi bi-trash"; //del icon
     span.appendChild(i);
 
+    //delete button
     span.addEventListener("click",()=>{
+        swal("Deleted !","","warning");
         removeTasks();
         tasks.splice(index,1);
         localStorage.setItem("tasks",JSON.stringify(tasks));
@@ -51,7 +53,8 @@ input.addEventListener("keypress",(event)=>{
 //add todos
 btn.addEventListener("click",()=>{
     if(input.value === ''){
-        alert("Empty!! Write something ");
+        // alert("Empty!! Write something ");
+        swal("Empty !!","Write something","warning");
     } else {
         removeTasks();
         tasks.push(input.value);
