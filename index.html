@@ -7,33 +7,51 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="index.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <title>Document</title>
   </head>
   <body>
     <header class="head">
       <h1>ToDo List</h1>
+      <p id="time"></p>
+      <h3 id="date">date</h3>
+      
     </header>
     
     <div class="container">
       <div class="main">
-
         <div class="adder">
-            <input type="text" placeholder="Enter todos" id="data" required />
+            <input type="text" placeholder="Add a to-do" id="data" required />
             <button id="btn" type="submit">Add</button>
         </div>
 
         <div class="lists">
           <ol id="list">
-            <!-- <li class="task">
-                <p>Title Here</p>
-                <span id="del">
+            <!-- <li class="taskrow">
+                <input type="checkbox" name="done" id="checkbox">
+                <input type="text" value="1. Title Here" class="task" readonly>
+                <span class="edit">Edit</span>
+                <span class="del">
                   <i class="bi bi-trash"></i>
                 </span>
             </li> -->
           </ol>
         </div>
-
       </div>
+    </div>
+    <!-- rating -->
+    <div class="rating">
+      <h1 id="emoji">Rate Us&#160</h1>
+      <div class="star">
+        <button class="ratebtn">&#9733</button>
+        <button class="ratebtn">&#9733</button>
+        <button class="ratebtn">&#9733</button>
+        <button class="ratebtn">&#9733</button>
+        <button class="ratebtn">&#9733&#160</button>
+      </div>
+      <!-- <button class="ratesubmit">Submit</button> -->
     </div>
     <script src="script.js"></script>
   </body>

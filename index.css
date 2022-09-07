@@ -4,20 +4,31 @@ html,body {
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box ;
 }
 .head{
     width: 100%;
     height: 20%;
-    background-color: rgb(51, 49, 49);
-    color: rgb(105, 226, 186);
+    background-color: rgb(72, 72, 72);
+    padding: 10px;
     display: flex;
-    flex-direction: row;
-    align-items:center;
+    flex-direction: column;
+    justify-items: center;
 }
 .head h1{
     font-size: 50px;
-    padding: 10px;
+    color: rgb(56, 255, 189);
+}
+.head p{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 0 0 0 5px;
+}
+.head h3{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: lighter;
+    padding: 0 0 0 5px;
 }
 .main{
     width: 70%;
@@ -49,10 +60,10 @@ input,button{
     padding: 12px;
     cursor: pointer;
     font-weight: bold;
-    background-color: rgb(151, 255, 220);
+    background-color: rgb(56, 255, 189);
 }
 #btn:hover{
-    background-color: rgb(202, 255, 237);
+    background-color: rgb(144, 255, 220);
 }
 .lists{
     margin: 10px auto;
@@ -67,25 +78,79 @@ input,button{
 }
 .container{
     background-color: rgb(235, 239, 254);
-    height: 80%;
+    height: 73%;
+    width: 100% !important;
     overflow: scroll;
-    scrollbar-color: blue;
 }
-.container .task{
+.container .main .lists{
+    padding: 2px;
+}
+.container .taskrow{
     display: flex;
+    padding-left: 4px;
 }
-.container .task p{
+#list .taskrow #checkbox{
+    margin: 2px 5px 0 0;
+    height: 26px;
+    width: 26px;
+}
+.container .taskrow .task{
+    background: none;
+    border: none;
     width: 100%;
+    font-size: 25px;
+    font-family: 'Satisfy', cursive;
+    /* display: block;
+    text-decoration-line: line-through; 
+    text-decoration-color: rgb(137, 137, 137);
+    text-decoration-thickness: 5%;   */
 }
 .container .main .lists #list .del{
-    background-color: rgb(232, 225, 225);
-    border-radius: 100%;
+    background-color: rgb(244, 215, 215);
     font-size: 20px;
-    height: 30px;
-    width: 30px;
+    /* height: 30px; */
+    width: 65px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+    border-radius: 10%;
+}
+.container .main .lists #list .edit{
+    background-color: rgb(205, 222, 255);
+    margin:  0 25px 0 0;
+    /* padding: 0 10px; */
+    /* height: 30px; */
+    width: 70px;
+    font-size: 17px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: rgb(255, 0, 0)
+    color: rgb(0, 42, 255);
+    border-radius: 10%;
+}
+/* rating */
+.rating{
+    height: 7%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(51, 49, 49);
+}
+.ratebtn{
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 23px;
+}
+#emoji{
+    font-size: 20px;
+    color: rgb(251, 196, 173);
+    font-style: oblique;
+    font-weight: 100;
 }
